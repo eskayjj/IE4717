@@ -1,0 +1,8 @@
+.center{
+    justify-content: center;
+    display: flex;
+}
+.right{
+    justify-content: right;
+    display: flex;
+}
