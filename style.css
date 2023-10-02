@@ -1,3 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 1280px;
+}
+
 .center{
     justify-content: center;
     display: flex;
@@ -5,4 +14,52 @@
 .right{
     justify-content: right;
     display: flex;
+}
+
+.footer{
+    display: flex;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    background-color: gray;
+    font-family: 'Inder', sans-serif;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 222px;
+}
+
+.icon{
+    width: 30px;
+    padding-right: 10px;
+}
+
+.aboutUs{
+    flex: 4;
+    text-align: left;
+    padding: 60px;
+}
+
+.contactUs{
+    flex: 2;
+    text-align: center;
+    padding: 60px;
+}
+
+.quickLinks{
+    flex: 2;
+    text-align: center;
+    vertical-align: middle;
+    padding: 60px;
+}
+
+
+.followUs{
+    flex: 1;
+    text-align: center;
+    padding: 60px;
+}
+
+.followUs div{
+    display: flex;
+    justify-content: space-evenly;
 }
