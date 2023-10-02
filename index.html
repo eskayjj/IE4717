@@ -12,28 +12,41 @@
 </head>
 
 <body>
-    <header class="center">
-        <h1>Food Project Placeholder</h1>
+    <header>
+        <!-- Create Logo & Find BG image for Header-->
+        <a href="index.html"><img class="logo" src="./Icons/placeholder-image.png"></a>
+        <!--Change the colour of hover and link to new webpages-->
+        <div class="topButton">
+            <button><label>Login</label><img src="./Icons/login.png"/></button>
+            <button><label>Cart</label><img src="./Icons/cart.png"/></button>
+        </div>
+        <!-- If got spare time then implement Search Button -->
+        <div id="searchBar">
+            <form>
+                <input type="search" name="foodSearch" placeholder="Search for food...">
+            </form>
+        </div>
     </header>
-    <div>
-        <nav>
-            <section>
-                <b>
-                    <a href="index.html">Home</a> &nbsp;
-                    <a href="stores.html">Stores</a>
-                </b>
-            </section>
-            <section class="right">
-                <a href="cart.html">Cart</a> &nbsp;
-                <a href="login.html"><strong>LOGIN</strong></a>
-            </section>
-        </nav>
+    <div class="content">
+        <div id="popularChoicesTitle">
+            Featured food
+        </div>
+        <!--Link Image to Food in Different canteen using PHP and SQL-->
+        <div id="popularChoicesPhoto">
+            <a href="#"><img src="./Icons/placeholder-image.png"></a>
+            <a href="#"><img src="./Icons/placeholder-image.png"></a>
+            <a href="#"><img src="./Icons/placeholder-image.png"></a>
+            <a href="#"><img src="./Icons/placeholder-image.png"></a>
+            <a href="#"><img src="./Icons/placeholder-image.png"></a>
+        </div>
     </div>
     <div class="footer">
+        <!-- Fill in About Us -->
         <div class="aboutUs">
             <h2>About Us</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id lorem nec ligula imperdiet aliquam. Mauris nec diam vitae mauris molestie pharetra.
         </div>
+        <!-- Change Email Destination -->
         <div class="contactUs">
             <h2>Contact Us</h2>
             <a href="mailto:email@email.com">email@email.com</a>
@@ -45,6 +58,7 @@
         <div class="followUs">
             <h2>Follow Us!</h2>
             <br>
+            <!--Link to Social Media-->
             <div>
                 <a href="#"><img class="icon" src="./Icons/facebook.png"></a>
                 <a href="#"><img class="icon" src="./Icons/instagram.png"></a>
