@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Project Placeholder</title>
+    <title>Food Project Placeholder-Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
+    <header style="background-color: transparent; max-height: 169px;">
         <!-- Create Logo & Find BG image for Header-->
         <a href="index.html"><img class="logo" src="./Icons/placeholder-image.png"></a>
-        <!--Change the colour of hover and link to new webpages-->
-        <div class="topButton">
-            <a href="login.html"><button><label>Login</label><img src="./Icons/login.png"/></button></a>
-            <button><label>Cart</label><img src="./Icons/cart.png"/></button>
-        </div>
-        <!-- If got spare time then implement Search Button -->
-        <div id="searchBar">
-            <form>
-                <input type="search" name="foodSearch" placeholder="Search for food...">
-            </form>
-        </div>
     </header>
-    <div class="content">
-        <div id="popularChoicesTitle">
-            Featured food
+    <div class="content" style="margin-top: 145px;">
+        <div id="registerDetails">
+            <div style= "font-family: 'Inder', sans-serif; font-size: 40px;">
+                Email Address<br>
+                <form style="padding-top: 25px; padding-bottom: 25px;">
+                    <input type="email" name="loginEmail" placeholder="eg. name@example.com" style= "font-family: 'Inder', sans-serif;">
+                </form>
+            </div>
+            <div style= "font-family: 'Inder', sans-serif; font-size: 40px;">
+                Password <br>
+                <form style="padding-top: 25px;">
+                    <input type="password" name="loginPassword" style= "font-family: 'Inder', sans-serif;">
+                </form>
+            </div>
         </div>
-        <!--Link Image to Food in Different canteen using PHP and SQL-->
-        <div id="popularChoicesPhoto">
-            <a href="#"><img src="./Icons/placeholder-image.png"></a>
-            <a href="#"><img src="./Icons/placeholder-image.png"></a>
-            <a href="#"><img src="./Icons/placeholder-image.png"></a>
-            <a href="#"><img src="./Icons/placeholder-image.png"></a>
-            <a href="#"><img src="./Icons/placeholder-image.png"></a>
+        <div id="registerBtns">
+            <div>
+                <form>
+                    <input type="submit" name="loginBtn" value="Login" style= "font-family: 'Inder', sans-serif; margin-top: 56px;">
+                </form>
+            </div>
+            <div>
+                <input type="submit" name="forgetPWBtn" value="Forget Password?" style= "font-family: 'Inder', sans-serif;">
+            </div>
+            <div>
+                <a href="register.html"><button style= "font-family: 'Inder', sans-serif; margin-bottom: 66px;">Register</button></a>
+            </div>
         </div>
     </div>
     <div class="footer">
@@ -67,5 +70,4 @@
         </div>
     </div>
 </body>
-
 </html>
