@@ -1,0 +1,58 @@
+#returnLogin{
+    margin: 238px 870px auto 0px;
+    display: flex;
+}
+
+#returnLogin img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#returnLogin label{
+    font-size: 32px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#returnLogin label:hover{
+    color: blue;
+}
+
+#registerDetails{
+    margin-left: 202px;
+    font-size: 40px;
+}
+
+#registerDetails input:not(#regSubmit){
+    width: 876px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 15px;
+    padding-left: 12px;
+}
+
+#pUser{
+    padding-top: 61px;
+    padding-bottom: 25px;
+}
+
+#pPassword, #pEmail, #pCfrmPassword{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#regSubmit{
+    margin-left: 124px;
+    width: 628px;
+    height: 79px;
+    margin-bottom: 190px;
+    font-size: 40px;
+    border-radius: 15px;
+}
+
+#regSubmit:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}

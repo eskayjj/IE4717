@@ -1,0 +1,37 @@
+#popularChoicesPhoto{
+    text-align: center;
+}
+
+#popularChoicesPhoto img{
+    width: 370px;
+    height: 173px;
+    border: 2px solid black;
+    margin: 20px 20px 20px auto;
+}
+
+#searchBar{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    padding-bottom: 40px;
+}
+
+#searchBar form input[type=search] {
+    width: 877px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 40px;
+    padding-left: 3%;
+}
+
+#searchBar form input[type=search]::-webkit-input-placeholder{
+    font-size: 40px;
+    padding-left: 3%;    
+    color: grey;
+}
+
+#popularChoicesTitle{
+    font-size: 40px;
+    margin: 20px auto 20px auto;
+}

@@ -1,0 +1,56 @@
+#loginDetails{
+    margin-left: 202px;
+    font-size: 40px;
+}
+
+#loginDetails input:not(#loginSubmit){
+    width: 877px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 15px;
+    padding-left: 12px;
+}
+
+#loginBtns{
+    margin-left: 326px;
+}
+
+#loginBtns input, #loginBtns button{ 
+    width: 628px;
+    height: 79px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    border-radius: 15px;
+}
+
+#loginBtns button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#pEmail{
+    padding-bottom: 25px;
+}
+
+#pPassword{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#loginSubmit{
+    margin-left: 124px;
+    width: 628px;
+    height: 79px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    border-radius: 15px;
+}
+
+#loginSubmit:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+

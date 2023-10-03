@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Project Placeholder-Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
@@ -12,34 +13,24 @@
 <body>
     <header style="background-color: transparent; max-height: 169px;">
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.html"><img class="logo" src="./Icons/placeholder-image.png"></a>
+        <a href="index.html"><img class="logo" src="../Icons/placeholder-image.png"></a>
     </header>
     <div class="content" style="margin-top: 145px;">
-        <div id="registerDetails">
-            <div style= "font-family: 'Inder', sans-serif; font-size: 40px;">
-                Email Address<br>
-                <form style="padding-top: 25px; padding-bottom: 25px;">
-                    <input type="email" name="loginEmail" placeholder="eg. name@example.com" style= "font-family: 'Inder', sans-serif;">
-                </form>
-            </div>
-            <div style= "font-family: 'Inder', sans-serif; font-size: 40px;">
-                Password <br>
-                <form style="padding-top: 25px;">
-                    <input type="password" name="loginPassword" style= "font-family: 'Inder', sans-serif;">
-                </form>
-            </div>
+        <div id="loginDetails">
+            <form>
+                <p id="pEmail">Email Address</p>
+                <input type="email" name="loginEmail" placeholder="eg. name@example.com">
+                <p id="pPassword">Password</p>
+                <input type="password" name="loginPassword">
+                <input type="submit" id="loginSubmit" name="loginBtn" value="Login" style= "margin-top: 56px;">
+            </form>
         </div>
-        <div id="registerBtns">
+        <div id="loginBtns">
             <div>
-                <form>
-                    <input type="submit" name="loginBtn" value="Login" style= "font-family: 'Inder', sans-serif; margin-top: 56px;">
-                </form>
+                <a href="forgotPW.html"><button>Forget Password?</button></a>
             </div>
             <div>
-                <input type="submit" name="forgetPWBtn" value="Forget Password?" style= "font-family: 'Inder', sans-serif;">
-            </div>
-            <div>
-                <a href="register.html"><button style= "font-family: 'Inder', sans-serif; margin-bottom: 66px;">Register</button></a>
+                <a href="register.html"><button style= "margin-bottom: 66px;">Register</button></a>
             </div>
         </div>
     </div>
@@ -63,9 +54,9 @@
             <br>
             <!--Link to Social Media-->
             <div>
-                <a href="#"><img class="icon" src="./Icons/facebook.png"></a>
-                <a href="#"><img class="icon" src="./Icons/instagram.png"></a>
-                <a href="#"><img class="icon" src="./Icons/twitter.png"></a>
+                <a href="#"><img class="icon" src="../Icons/facebook.png"></a>
+                <a href="#"><img class="icon" src="../Icons/instagram.png"></a>
+                <a href="#"><img class="icon" src="../Icons/twitter.png"></a>
             </div>
         </div>
     </div>

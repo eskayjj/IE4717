@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Inder', sans-serif;
 }
 
 html{ 
@@ -26,6 +27,11 @@ header{
     position: relative;
 }
 
+.content{
+    max-width: 1280px;
+    margin: auto;
+}
+
 .topButton{
     position: absolute;
     right: 0;
@@ -39,7 +45,6 @@ header{
 .topButton button{
     width: 194px;
     height: 50px;
-    font-family: 'Inder', sans-serif;
     margin-right: 50px;
     border: 2px solid black;
     cursor: pointer;
@@ -48,12 +53,14 @@ header{
 .topButton button:hover{
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .topButton button label{
     position: relative;
     font-size: 30px;
     margin-left: -30px;
+    cursor: pointer;
 }
 
 .topButton button img {
@@ -61,51 +68,7 @@ header{
     width: 33px;
     margin-left: 10px;
     margin-top: 3px;
-}
-
-#searchBar{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    padding-bottom: 40px;
-}
-
-#searchBar form input[type=search] {
-    width: 877px;
-    height: 80px;
-    border-radius: 10px;
-    font-size: 40px;
-    padding-left: 3%;
-    font-family: 'Inder', sans-serif;
-}
-
-#searchBar form input[type=search]::-webkit-input-placeholder{
-    font-size: 40px;
-    padding-left: 3%;    
-    color: grey;
-}
-
-#popularChoicesTitle{
-    font-family: 'Inder', sans-serif;
-    font-size: 40px;
-    margin: 20px auto 20px auto;
-}
-
-.content{
-    max-width: 1280px;
-    margin: auto;
-}
-
-#popularChoicesPhoto{
-    text-align: center;
-}
-
-#popularChoicesPhoto img{
-    width: 370px;
-    height: 173px;
-    border: 2px solid black;
-    margin: 20px 20px 20px auto;
+    cursor: pointer;
 }
 
 .footer{
@@ -113,7 +76,6 @@ header{
     padding: 0px;
     bottom: 0;
     background-color: gray;
-    font-family: 'Inder', sans-serif;
     width: 100%;
     justify-content: space-evenly;
     height: 222px;
@@ -159,26 +121,5 @@ header{
     justify-content: space-evenly;
 }
 
-#registerDetails{
-    margin-left: 202px;
-}
 
-#registerDetails input{
-    width: 877px;
-    height: 80px;
-    font-size: 40px;
-    border-radius: 15px;
-    padding-left: 12px;
-}
 
-#registerBtns{
-    margin-left: 326px;
-}
-
-#registerBtns input, button{ 
-    width: 628px;
-    height: 79px;
-    margin-bottom: 40px;
-    font-size: 40px;
-    border-radius: 15px;
-}
