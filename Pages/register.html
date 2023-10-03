@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../Stylesheets/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
 </head>
 <body>
     <header style="background-color: transparent; max-height: 169px;">
@@ -22,13 +22,13 @@
         <div id="registerDetails">
             <form>
                 <p id="pUser">Username</p>
-                <input type="email" name="regUser">
+                <input type="email" name="regUser" required>
                 <p id="pEmail">Email Address</p>
-                <input type="email" name="regEmail" placeholder="eg. name@example.com">
+                <input type="email" name="regEmail" placeholder="eg. name@example.com" required>
                 <p id="pPassword">Password</p>
-                <input type="password" name="regPassword">
+                <input type="password" name="regPassword" required>
                 <p id="pCfrmPassword">Confirm Password</p>
-                <input type="password" name="regCfrmPassword">
+                <input type="password" name="regCfrmPassword" required>
                 <input type="submit" id="regSubmit" name="regBtn" value="Register" style= "margin-top: 270px;">
             </form>
         </div>
