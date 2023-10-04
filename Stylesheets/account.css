@@ -1,0 +1,13 @@
+#accountTitle{
+    position: absolute;
+    bottom: 0;
+    margin-left: 60px;
+    margin-bottom: 46px;
+    font-size: 55px;
+    font-family: 'Capriola', sans-serif;
+}
+
+.headLabel{
+    margin: 53px auto 31px 60px;
+    font-size: 40px;
+}
