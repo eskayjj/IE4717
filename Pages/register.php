@@ -9,55 +9,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <script defer src="../js/validation.js"></script>
 </head>
 <body>
+<?php Session_start(); ?>
     <header style="background-color: transparent; max-height: 169px;">
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.html"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
     </header>
     <div class="content">
         <div id="returnLogin">
-            <img src="../Icons/left-arrow.png"><a href="login.html"><label>Back To Login</label></a>
+            <img src="../Icons/left-arrow.png"><a href="login.php"><label>Back To Login</label></a>
         </div>
         <div id="registerDetails">
-            <form>
+            <form action="../process/registerprocess.php" method="post" onsubmit="return registerValidation()">
+            <?php if(isset($_SESSION['registerFail'])) {
+                        if($_SESSION['registerFail']){
+                            echo '<span id="errorMsg">Username/Email address already exist!</span>';
+                            unset($_SESSION['registerFail']);
+                        }
+                    }
+                    ?> 
                 <p id="pUser">Username</p>
-                <input type="email" name="regUser" required>
+                <div class="parent">
+                    <div class="inputText">
+                        <input type="text" name="regUser" onfocus="focusEntry(this)" onfocusout="focusEntry(this)" oninput="updateErrorStatusUser()" required>
+                    </div>
+                    <div class="validation">
+                        <p id="charLength" class="invalid" style="display:none;"> 8 - 16 characters</p>
+                        <p id="specialChar" class="valid" style="display:none;"> No special character (eg. @,!.<>/*)</p>
+                        <p id="noSpace" class="valid" style="display:none;"> No spaces</p>
+                    </div>
+                </div>
                 <p id="pEmail">Email Address</p>
-                <input type="email" name="regEmail" placeholder="eg. name@example.com" required>
+                <div class="parent">
+                    <div class="inputText">
+                        <input type="email" name="regEmail" placeholder="eg. name@example.com" onfocus="focusEntry(this)" onfocusout="focusEntry(this)" oninput="updateErrorStatusEmail()" required>
+                    </div>
+                    <div class="validation">
+                        <p id="emailValid" class="invalid" style="display:none;"> Valid email address</p>
+                    </div>
+                </div>
                 <p id="pPassword">Password</p>
-                <input type="password" name="regPassword" required>
+                <div class="parent">
+                    <div class="inputText">
+                        <input type="password" name="regPassword" onfocus="focusEntry(this)" onfocusout="focusEntry(this)" oninput="updateErrorStatusPW()" required>
+                    </div>
+                    <div class="validation">
+                        <p id="pwLength" class="invalid" style="display:none;"> 8 - 16 characters</p>
+                        <p id="pwUpper" class="invalid" style="display:none;"> At least 1 uppercase letter</p>
+                        <p id="pwLower" class="invalid" style="display:none;"> At least 1 lowercase letter</p>
+                        <p id="pwNum" class="invalid" style="display:none;"> At least 1 numeral</p>
+                        <p id="pwSpecial" class="invalid" style="display:none;"> At least 1 special character</p>
+                        <p id="pwSpace" class="valid" style="display:none;"> No spaces</p>
+                    </div>
+                </div>
                 <p id="pCfrmPassword">Confirm Password</p>
-                <input type="password" name="regCfrmPassword" required>
+                <div class="parent">
+                    <div class="inputText">
+                        <input type="password" name="regCfrmPassword" onfocus="focusEntry(this)" onfocusout="focusEntry(this)" oninput="updateErrorStatusPWConfirm()" required>
+                    </div>
+                    <div class="validation">
+                        <p id="cfrmPWCheck" class="invalid" style="display:none;"> Password match</p>
+                    </div>
+                </div>
                 <input type="submit" id="regSubmit" name="regBtn" value="Register" style= "margin-top: 270px;">
             </form>
         </div>
     </div>
-    <div class="footer">
-        <!-- Fill in About Us -->
-        <div class="aboutUs">
-            <h2>About Us</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id lorem nec ligula imperdiet aliquam. Mauris nec diam vitae mauris molestie pharetra.
-        </div>
-        <!-- Change Email Destination -->
-        <div class="contactUs">
-            <h2>Contact Us</h2>
-            <a href="mailto:email@email.com">email@email.com</a>
-        </div>
-        <div class="quickLinks">
-            <h2>Quick Links</h2>
-            <a href="feedback.html">Feedback</a><br><a href="register.html">Register</a></p>
-        </div>
-        <div class="followUs">
-            <h2>Follow Us!</h2>
-            <br>
-            <!--Link to Social Media-->
-            <div>
-                <a href="#"><img class="icon" src="../Icons/facebook.png"></a>
-                <a href="#"><img class="icon" src="../Icons/instagram.png"></a>
-                <a href="#"><img class="icon" src="../Icons/twitter.png"></a>
-            </div>
-        </div>
-    </div>
+    <?php
+        include 'footer.php';
+    ?>
 </body>
 </html>

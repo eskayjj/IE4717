@@ -19,6 +19,13 @@
     color: blue;
 }
 
+#errorMsg{
+    display: block;
+    color: red;
+    margin-bottom: 40px;
+    margin-left: 145px;
+}
+
 #registerDetails{
     margin-left: 202px;
     font-size: 40px;
@@ -31,6 +38,23 @@
     border-radius: 15px;
     padding-left: 12px;
 }
+
+.parent{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputText{
+    order: 1;
+}
+
+.validation{
+    order: 2;
+    margin-left: 10px;
+    white-space: nowrap;
+    line-height: 25px;
+}
+
 
 #pUser{
     padding-top: 61px;
@@ -55,4 +79,26 @@
     cursor: pointer;
     background-color: black;
     color: white;
+}
+
+.invalid {
+    color: red;
+    font-size: 20px;
+}
+
+.invalid::before {
+    position: relative;
+    /* left: -35px; */
+    content: "\2716";
+}
+
+.valid {
+    color: green;
+    font-size: 20px;
+}
+
+.valid::before {
+    position: relative;
+    /* left: -35px; */
+    content: "\2714";
 }

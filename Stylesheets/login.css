@@ -11,6 +11,13 @@
     padding-left: 12px;
 }
 
+#errorMsg{
+    display: block;
+    color: red;
+    margin-bottom: 40px;
+    margin-left: 145px;
+}
+
 #loginBtns{
     margin-left: 326px;
 }
