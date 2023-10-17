@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <script defer src="../js/validation.js"></script>
 </head>
 
 <body>
@@ -37,20 +38,25 @@
     <div class="content">
         <div id="feedbackFormBG">
             <div id="feedbackForm">
-                <form>
+                <form onsubmit="return feedbackValidation()">
                     <p id="pSubject">Subject*</p>
                     <select name="subject" id="subject" required>
                         <option value="" disabled selected>Choose one...</option>
-                        <option value="test">Test</option>
+                        <option value="generalEnquiry">General Enquiry</option>
+                        <option value="compliment">Compliment</option>
+                        <option value="missingOrder">Missing/Wrong Order</option>
+                        <option value="lateDelivery">Late Delivery/Long Waiting Time</option>
+                        <option value="refund">Refund</option>
+                        <option value="foodQuality">Food Quality</option>
                     </select>
                     <p id="pName">Full Name*</p>
-                    <input type="email" name="feedbackUser" required>
+                    <input type="text" name="feedbackName" id="feedbackName" required>
                     <p id="pEmail">Email Address*</p>
-                    <input type="email" name="feedbackEmail" placeholder="eg. name@example.com" required>
-                    <p id="pPassword">Contact Number</p>
-                    <input type="password" name="feedbackPassword">
+                    <input type="email" name="feedbackEmail" id="feedbackEmail" placeholder="eg. name@example.com" required>
+                    <p id="pContact">Contact Number</p>
+                    <input type="text" name="feedbackContact" id="feedbackContact">
                     <p id="pFeedback">Feedback*</p>
-                    <input type="text" name="feedbackFeedback" id="feedbackBox">
+                    <input type="text" name="feedbackFeedback" id="feedbackBox" required>
                     <input type="submit" id="feedbackSubmit" name="feedbackBtn" value="Submit Feedback!"
                         style="margin-top: 61px;">
                 </form>

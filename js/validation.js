@@ -4,14 +4,14 @@ var pw = document.getElementsByName('regPassword')//length, no whitespace
 var cfrmpw = document.getElementsByName('regCfrmPassword')//same as pw
 const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
 const pwRegex = /\s+[A-Z]+[a-z]+[0-9]+\W+/
-const special = /[^\w\s]+/
-const space = /\s+/
+const specialRegex = /[^\w\s]+/
+const spaceRegex = /\s+/
+const userRegex = /^[^A-Za-z_0-9]|[\r\t\n\f]$/
+const nameRegex = /^[A-Za-z\s]+$/
+const contactRegex = /^[0-9]{8}$/
 
 
 function registerValidation(){
-
-    const userRegex = /^[^A-Za-z_0-9]|[\r\t\n\f]$/
-
     if(user[0].value.length <=8 || user[0].value.length >= 16){
         console.log('Fail User')
         return false
@@ -80,7 +80,7 @@ function updateErrorStatusUser(){
         crit1.classList.add("invalid")
     }
 
-    if(special.test(user[0].value)){
+    if(specialRegex.test(user[0].value)){
         crit2.classList.remove("valid")
         crit2.classList.add("invalid")
     }
@@ -91,7 +91,7 @@ function updateErrorStatusUser(){
         crit2.classList.add("valid")
     }
 
-    if(space.test(user[0].value)){
+    if(spaceRegex.test(user[0].value)){
         crit3.classList.remove("valid")
         crit3.classList.add("invalid")
     }
@@ -183,7 +183,7 @@ function updateErrorStatusPW(){
         crit9.classList.add("invalid")
     }
 
-    if(space.test(pw[0].value)){
+    if(spaceRegex.test(pw[0].value)){
         crit10.classList.remove("valid")
         crit10.classList.add("invalid")
     }
@@ -209,5 +209,32 @@ function updateErrorStatusPWConfirm(){
 }
 
 function feedbackValidation(){
+    var pName = document.getElementById('feedbackName')
+    var pEmail = document.getElementById('feedbackEmail')
+    var pContact = document.getElementById('feedbackContact')
+    // var pSubject = document.getElementById('subject')
 
+    // var selectedValue = pSubject.options[pSubject.selectedIndex].value
+
+    // if(selectedValue == ''){
+    //     console.log('Fail Select')
+    //     return false
+    // }
+
+    if(!nameRegex.test(pName.value)){
+        console.log('Fail Name')
+        return false
+    }
+
+    if(!emailRegex.test(pEmail.value)){
+        console.log('Fail Email')
+        return false
+    }
+
+    if(!contactRegex.test(pContact.value)){
+        console.log('Fail Contact')
+        return false
+    }
+
+    return true
 }
