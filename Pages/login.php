@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Project Placeholder</title>
+    <title>Food Project Placeholder-Login</title>
     <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
-    <link rel="stylesheet" type="text/css" href="../Stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header style="background-color: transparent; max-height: 169px;">
         <!-- Create Logo & Find BG image for Header-->
         <a href="index.html"><img class="logo" src="../Icons/placeholder-image.png"></a>
-        <!--Change the colour of hover and link to new webpages-->
-        <div class="topButton">
-            <a href="login.html"><button><label>Login</label><img src="../Icons/login.png"/></button></a>
-            <button><label>Cart</label><img src="../Icons/cart.png"/></button>
-        </div>
-        <!-- If got spare time then implement Search Button -->
-        <div id="searchBar">
-            <form>
-                <input type="search" name="foodSearch" placeholder="Search for food...">
+    </header>
+    <div class="content" style="margin-top: 145px;">
+        <div id="loginDetails">
+            <form action="../process/loginprocess.php" method="post">
+                <p id="pEmail">Email Address</p>
+                <input type="email" name="loginEmail" placeholder="eg. name@example.com" required>
+                <p id="pPassword">Password</p>
+                <input type="password" name="loginPassword" required>
+                <input type="submit" id="loginSubmit" name="loginBtn" value="Login" style= "margin-top: 56px;">
             </form>
         </div>
-    </header>
-    <div class="content">
-        <div id="popularChoicesTitle">
-            Featured food
-        </div>
-        <!--Link Image to Food in Different canteen using PHP and SQL-->
-        <div id="popularChoicesPhoto">
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
+        <div id="loginBtns">
+            <div>
+                <a href="forgotPW.html"><button>Forget Password?</button></a>
+            </div>
+            <div>
+                <a href="register.html"><button style= "margin-bottom: 66px;">Register</button></a>
+            </div>
         </div>
     </div>
     <div class="footer">
@@ -67,5 +61,4 @@
         </div>
     </div>
 </body>
-
 </html>
