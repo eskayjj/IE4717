@@ -1,0 +1,35 @@
+#textInfo{
+    /* background-color: cyan; */
+}
+
+#timeCheck{
+    font-size: 50px;
+    height: 275px;
+    width: 897px;
+    text-align: center;
+    margin: 222px auto 0px auto;
+}
+
+#defaultText{
+    font-size: 50px;
+    height: 275px;
+    width: 897px;
+    text-align: center;
+    margin: auto;
+}
+
+#backLink{
+    font-size: 50px;
+    margin: 159px auto 243px auto;
+    text-align: center;     
+    height: fit-content;
+    width: fit-content;
+}
+
+#backLink a{
+    color: black;
+}
+
+#backLink a:hover{
+    color: blue;
+}
