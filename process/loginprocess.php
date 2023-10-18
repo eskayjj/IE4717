@@ -12,6 +12,9 @@
     $query = 'SELECT * from user where email = "' . $loginEmail . '" and password = "' . $loginPassword . '"';
     $result = $db->query($query);
 
+    //checking for valid login entry
+    $check = mysqli_num_rows($result);
+
     Session_start();
 
     if ($check == 1) { 
@@ -27,6 +30,7 @@
     } 
     
     else {  
+        // echo($_SESSION['loginEmail'] . $_SESSION['loginPassword']);
         $_SESSION['loginFail']= true;
         header('location: ../Pages/login.php');
     } 
