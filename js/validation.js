@@ -171,7 +171,7 @@ function updateErrorStatusPW(){
         crit8.classList.add("invalid")
     }
 
-    if(special.test(pw[0].value)){
+    if(specialRegex.test(pw[0].value)){
         // console.log(special.test(pw[0].value.trim))
         // console.log(pw[0].value)
         crit9.classList.remove("invalid")
