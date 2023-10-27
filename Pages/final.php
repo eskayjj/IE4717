@@ -15,6 +15,9 @@
     <header style="background-color: transparent; max-height: 169px;">
         <!-- Create Logo & Find BG image for Header-->
         <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <?php
+            include 'loginheader.php';
+        ?>
     </header>
     <div class="content">
         <div id="textInfo">

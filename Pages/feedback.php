@@ -17,20 +17,12 @@
     <header>
         <!-- Create Logo & Find BG image for Header-->
         <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+
         <!--Change the colour of hover and link to new webpages-->
-        <div class="topButton">
-            <div class="dropdown">
-                <!--If not logged in, needs to display login button instead-->
-                <button class="dropbtn"><label>Account</label><img src="../Icons/dropdown.png"></button>
-                <div class="dropdown-content">
-                    <!-- Use PHP to display Username  -->
-                    <a href="#">Username</a>
-                    <!-- Use PHP/JS to code logout -->
-                    <a href="#">Logout</a>
-                </div>
-            </div>
-            <button><label>Cart</label><img src="../Icons/cart.png" /></button>
-        </div>
+        <?php
+            include 'loginheader.php';
+        ?>
+        
         <div id="feedbackTitle">
             Feedback
         </div>

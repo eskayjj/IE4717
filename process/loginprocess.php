@@ -25,6 +25,10 @@
         $_SESSION['name']= $data['name'];
         $_SESSION['contactNumber']= $data['contact_number'];
         $_SESSION['deliveryAddress']= $data['delivery_address'];
+        $cookie_name = "user";
+        $cookie_value = $data['username'];
+        setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
+        echo "Cookie '" . $cookie_name . "' is set!";
         header('location: ../Pages/canteen.php');
         // echo ($_SESSION['loginEmail'] . $_SESSION['username'] . $_SESSION['name'] . $_SESSION['contactNumber'] . $_SESSION['deliveryAddress']);
     } 

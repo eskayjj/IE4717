@@ -15,11 +15,12 @@
     <header>
         <!-- Create Logo & Find BG image for Header-->
         <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+
         <!--Change the colour of hover and link to new webpages-->
-        <div class="topButton">
-            <a href="login.php"><button><label>Login</label><img src="../Icons/login.png"/></button></a>
-            <button><label>Cart</label><img src="../Icons/cart.png"/></button>
-        </div>
+        <?php
+            include 'loginheader.php';
+        ?>
+        
         <!-- If got spare time then implement Search Button -->
         <div id="searchBar">
             <form>

@@ -11,6 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <!-- Create Logo & Find BG image for Header-->
+        <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+
+        <!--Change the colour of hover and link to new webpages-->
+        <?php
+                include 'loginheader.php';
+        ?>
+    </header>
     <?php
         include 'footer.php';
     ?>
