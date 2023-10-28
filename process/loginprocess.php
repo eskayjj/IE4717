@@ -29,7 +29,7 @@
         $cookie_value = $data['username'];
         setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
         echo "Cookie '" . $cookie_name . "' is set!";
-        header('location: ../Pages/canteen.php');
+        header('location: ../Pages/canteenlist.php');
         // echo ($_SESSION['loginEmail'] . $_SESSION['username'] . $_SESSION['name'] . $_SESSION['contactNumber'] . $_SESSION['deliveryAddress']);
     } 
     

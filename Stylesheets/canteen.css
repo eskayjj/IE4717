@@ -1,0 +1,99 @@
+#canteenTitle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    padding-bottom: 53px;
+    font-family: 'Capriola', sans-serif;
+    font-size: 130px;
+}
+
+.content{
+    margin-bottom: 478px;
+}
+
+#canteenList{
+    margin-bottom: 478px;
+    margin-top: 30px;
+}
+
+#returnCanteenList{
+    margin: 0px auto 25px 47px;
+    display: flex;
+}
+
+#returnCanteenList img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+#returnCanteenList a{
+    text-decoration: none;
+}
+
+#returnCanteenList label{
+    font-size: 30px;
+    padding-left: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+#returnCanteenList label:hover{
+    color: blue;
+}
+
+.canteenPhoto{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 46px 46px 46px;
+    height: 131px;
+    width: 1187px;
+}
+
+#photo{
+    height: 131px;
+    width: 284px;
+    margin-right: 96px;
+}
+
+#description{
+    margin-top: 25px;
+}
+
+#description label{
+    display: block;
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-family: 'Capriola', sans-serif;
+}
+
+#description p{
+    font-size: 15px;
+    font-family: 'Capriola', sans-serif;
+    opacity: 50%;
+}
+
+#price{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 240px;
+}
+
+#addToCart{
+    margin-top: 35px;
+    margin-left: 60px;
+}
+
+#addToCart button{
+    height: 51px;
+    width: 180px;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    font-size: 20px;
+}
+
+#addToCart button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #d9d9d9;
+}

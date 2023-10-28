@@ -1,0 +1,47 @@
+#canteenListTitle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    padding-bottom: 53px;
+    font-family: 'Capriola', sans-serif;
+    font-size: 130px;
+}
+
+#list{
+    margin: 174px 92px 328px 92px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 71px;
+    row-gap: 71px;
+}
+
+
+.canteenListPhoto{
+    width: 318px;
+    height: 140px;
+    background-color: #d9d9d9;
+    position: relative;
+    /* float: left; */
+    z-index: -1;
+}
+
+.canteenListText{
+    /* display: block; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.canteenListText:hover{
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.canteenListText label{
+    display: block;
+    font-family: 'Capriola', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}

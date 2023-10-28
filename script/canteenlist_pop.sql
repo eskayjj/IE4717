@@ -1,0 +1,10 @@
+INSERT INTO studyfuel.canteen (canteen) values ('Canteen 1');
+INSERT INTO studyfuel.canteen (canteen) values ('Canteen 2');
+INSERT INTO studyfuel.canteen (canteen) values ('Canteen 9');
+INSERT INTO studyfuel.canteen (canteen) values ('Canteen 11');
+INSERT INTO studyfuel.canteen (canteen) values ('Canteen 14');
+INSERT INTO studyfuel.canteen (canteen) values ('Canteen 16');
+INSERT INTO studyfuel.canteen (canteen) values ('Tamarind Canteen');
+INSERT INTO studyfuel.canteen (canteen) values ('Cresent Canteen');
+INSERT INTO studyfuel.canteen (canteen) values ('Fine Foods Canteen');
+INSERT INTO studyfuel.canteen (canteen) values ('Koufu');

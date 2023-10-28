@@ -1,0 +1,2 @@
+INSERT INTO studyfuel.food (canteen_id, food_name, description, price) values (1, 'Pepperoni Pizza', 'Pepperoni pizza from Domino''s', 10.0);
+INSERT INTO studyfuel.food (canteen_id, food_name, description, price) values (1, 'Hawaiian Pizza', 'Hawaiian pizza from Domino''s', 12.5);
