@@ -47,15 +47,20 @@
                 <img src="../Icons/left-arrow.png"><a href="./canteenlist.php"><label><u>Back To Canteens</u></label></a>
             </div>
             <?php
-                    while ($row = mysqli_fetch_assoc($result2)) {
-                        if($row['canteen_id'] == $_GET['id']) {
-                            $_SESSION['foodName'] = $row['food_name'];
-                            $_SESSION['description'] = $row['description'];
-                            $_SESSION['price'] = $row['price'];
-                        }
+                while ($row = mysqli_fetch_assoc($result2)) {
+                    if($row['canteen_id'] == $_GET['id']) {
+                        $_SESSION['foodName'] = $row['food_name'];
+                        $_SESSION['description'] = $row['description'];
+                        $_SESSION['price'] = $row['price'];
                         include 'canteenphoto.php';
                     }
-                ?>
+                    else{
+                        $_SESSION['foodName'] = '';
+                        $_SESSION['description'] = '';
+                        $_SESSION['price'] = '';
+                    }
+                }
+            ?>
         </div>
     </div>
 
