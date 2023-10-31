@@ -9,9 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <?php
+        if(isset($_COOKIE['user'])) {
+            header('location: ../Pages/index.php');
+        } 
+
+        Session_start();
+    ?>
 </head>
 <body>
-    <?php Session_start(); ?>
     <header style="background-color: transparent; max-height: 169px;">
         <!-- Create Logo & Find BG image for Header-->
         <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>

@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <?php
+        if(!isset($_COOKIE['user'])) {
+            header('location: ../Pages/login.php');
+        } 
+        session_start();
+    ?>
 </head>
 <body>
     <header>

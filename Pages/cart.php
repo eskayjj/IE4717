@@ -6,10 +6,27 @@
     <title>Food Project Placeholder-Cart</title>
     <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/cart.css">
-    <link rel="stylesheet" type="text/css" href="../Stylesheets/cartx.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <script defer src="../js/cart.js"></script>
+    <?php
+        if(!isset($_COOKIE['user'])) {
+            header('location: ../Pages/login.php');
+        } 
+        @ $db = new mysqli('localhost', 'root', '', 'studyfuel');
+
+        if (mysqli_connect_errno()) {
+            exit;  
+        }
+
+        $query = 'SELECT * from cart inner join food on cart.food_id = food.food_id where name_id = ' . $_COOKIE['user'] . '';
+
+        $result = $db->query($query);
+
+        Session_start();
+        $_SESSION['grand_total'] = 0;
+    ?>
 </head>
 <body>
     <header>
@@ -22,30 +39,60 @@
         ?>
 
         <div id="mycartTitle">
-            My Cart (X)
+            <?php
+                echo 'My Cart (' . mysqli_num_rows($result) . ')'
+            ?>
+            
         </div>
     </header>
-     <div class="content">   
-      <div class="canteenLabel">
-        <label>Canteen [?]</label>
-      </div>  
-       <div id="orderbox">
-       <label class="container">
-        <input type="checkbox">
-        <span class="checkmark"></span>
-       </label>
-        <img src="placeholder.jpg" alt="Image of Food" width="500" height="300" style="float: left; padding-left: 10%; padding-top: 6%;">
-        <div id="description">
-           <p> [Name of food] </p> <br><br> 
-           <p> [Item Description] </p> <br><br>
-           <p> [Qty] </p> <br><br>
-           <p> [Total Price] </p> <br><br>
-        </div>     
-       </div>
-       <div>
-       <p id="totalP" style="float: right;">Total: $X.XX</p>
-       <input type="submit" id="orderSubmit" name="orderBtn" value="Checkout">
-       </div>
+        <div class="content">   
+            <!-- TODO if time permits -->
+            <!-- <div class="canteenLabel">
+                <label>Canteen [?]</label>
+            </div>   -->
+            <form method='post' action='../process/clearCartprocess.php'>
+            <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $subTotal = floatval($row['price']) * floatval($row['quantity']);
+            ?>
+                <div id="orderbox">
+                    <label class="container">
+                        <input type="checkbox" name="cartItem[]" class="cartItem" onclick="return onCartItemCheck(<?php echo $row['food_id'] ?>)" value="<?php echo $row['food_id'] . ',' . $subTotal ?>">
+                        <span class="checkmark"></span>
+                    </label>
+                    <img src="placeholder.jpg" alt="Image of Food" width="500" height="300" style="float: left; padding-left: 10%; padding-top: 6%;"/>
+                    <div id="description">
+                        <?php
+                            echo '<p>' . $row['food_name'] . '</p>'
+                        ?>
+                         <br><br> 
+                        <!-- <p> [Item Description] </p> <br><br> -->
+                        <?php
+                            echo '<p>Quantity: ' . $row['quantity'] . '</p>'
+                        ?>
+                        <br><br>
+                        <?php
+                            echo '<p>$' . number_format($subTotal,2). '</p>'
+                        ?>
+                        <br><br>
+                    </div>     
+                </div>
+
+            <?php
+                }
+            ?>
+        
+            <div style="text-align:right;">
+                <div>
+                    <p id="totalP"></p>
+                </div>
+                <div id="inputBtns">
+                    <!-- <input type="hidden" id="selectedFood" name="selectedFood" /> -->
+                    <input type="submit" id="orderClear" name="clearBtn" value="Clear"/>
+                    <input type="submit" id="orderSubmit" name="orderBtn" value="Checkout"/>
+                </div>
+            </div>
+        </form>
     </div>
     <?php
         include 'footer.php';

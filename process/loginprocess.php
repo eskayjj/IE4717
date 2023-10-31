@@ -1,4 +1,8 @@
 <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        header('location: ../Pages/index.php');
+    }
+
     $loginEmail = $_POST['loginEmail'];
     $loginPassword = $_POST['loginPassword'];
 
@@ -26,7 +30,7 @@
         $_SESSION['contactNumber']= $data['contact_number'];
         $_SESSION['deliveryAddress']= $data['delivery_address'];
         $cookie_name = "user";
-        $cookie_value = $data['username'];
+        $cookie_value = $data['user_id'];
         setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
         echo "Cookie '" . $cookie_name . "' is set!";
         header('location: ../Pages/canteenlist.php');

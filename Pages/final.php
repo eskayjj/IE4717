@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
     <script src="../js/timeCheck.js"></script>
+    <?php
+        if(!isset($_COOKIE['user'])) {
+            header('location: ../Pages/login.php');
+        } 
+        Session_start();
+    ?>
 </head>
 <body>
     <header style="background-color: transparent; max-height: 169px;">

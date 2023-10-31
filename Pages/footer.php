@@ -11,7 +11,17 @@
     </div>
     <div class="quickLinks">
         <h2>Quick Links</h2>
-        <a href="feedback.php">Feedback</a><br><a href="register.php">Register</a></p>
+        <?php
+            if(isset($_COOKIE['user'])) {
+        ?>
+            <a href="feedback.php">Feedback</a><br><a href="canteenlist.php">Canteens</a></p>
+        <?php
+            } else {
+        ?>
+            <a href="feedback.php">Feedback</a><br><a href="register.php">Register</a></p>
+        <?php
+            }
+        ?>
     </div>
     <div class="followUs">
         <h2>Follow Us!</h2>
@@ -23,4 +33,5 @@
             <a href="#"><img class="icon" src="../Icons/twitter.png"></a>
         </div>
     </div>
+    
 </div>

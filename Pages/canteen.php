@@ -9,7 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <script defer src="../js/canteenFoodModal.js"></script>
+    <script defer src=../js/counter.js></script>
     <?php
+        if(!isset($_COOKIE['user'])) {
+            header('location: ../Pages/login.php');
+        } 
         @ $db = new mysqli('localhost', 'root', '', 'studyfuel');
 
         if (mysqli_connect_errno()) {
@@ -18,7 +23,7 @@
 
         $query = 'SELECT canteen FROM canteen WHERE canteen_id = "'. $_GET['id'] . '"';
         $result = $db->query($query);
-        $query2 = 'SELECT * from food';
+        $query2 = 'SELECT * from food WHERE canteen_id = "'. $_GET['id'] .'"';
         $result2 = $db->query($query2);
        
         Session_start();
@@ -48,19 +53,44 @@
             </div>
             <?php
                 while ($row = mysqli_fetch_assoc($result2)) {
-                    if($row['canteen_id'] == $_GET['id']) {
-                        $_SESSION['foodName'] = $row['food_name'];
-                        $_SESSION['description'] = $row['description'];
-                        $_SESSION['price'] = $row['price'];
-                        include 'canteenphoto.php';
-                    }
-                    else{
-                        $_SESSION['foodName'] = '';
-                        $_SESSION['description'] = '';
-                        $_SESSION['price'] = '';
-                    }
+                    $_SESSION['food_id'] = $row['food_id'];
+                    $_SESSION['foodName'] = $row['food_name'];
+                    $_SESSION['description'] = $row['description'];
+                    $_SESSION['price'] = $row['price'];
+                    include 'canteenphoto.php';
                 }
             ?>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div id=closeBtn>
+                <span class="close">&times;</span>
+            </div>
+            <div id="modalList">
+                <div id="photo">
+                    <img src="../Icons/placeholder-image">
+                </div>
+                <div id="modalDescription">
+                </div>
+                <div id="modalPrice">
+                </div>
+                <div class="number">
+	                <span class="minus" onclick="decrement()"><b>-</b></span>
+	                <input type="text" class="qty" value="1" disabled />
+	                <span class="plus" onclick="increment()"><b>+</b></span>
+                </div>
+                
+            </div>
+            <div id=addToCartInner>
+                <form id='addToCartForm' method='post' action='../process/addToCartprocess.php'>
+                    <input type="hidden" name="hiddenFoodId" id="hiddenFoodId">
+                    <input type="hidden" name="hiddenPrice" id="hiddenPrice">
+                    <input type="hidden" name="hiddenQty" id="hiddenQty">
+                    <button onclick='return addToCart()'><b>Add To Cart</b></button>
+                </form>
+            </div>
         </div>
     </div>
 

@@ -7,12 +7,12 @@
             <button class="dropbtn"><label>Account</label><img src="../Icons/dropdown.png"></button>
             <div class="dropdown-content">
                 <!-- Use PHP to display Username  -->
-                <a href="#">Username</a>
+                <a href="../Pages/account.php"><?php echo $_SESSION['username'] ?></a>
                 <!-- Use PHP/JS to code logout -->
                 <a href="../process/logoutprocess.php">Logout</a>
             </div>
         </div>
-        <button><label>Cart</label><img src="../Icons/cart.png" /></button>
+        <a href="../Pages/cart.php"><button><label>Cart</label><img src="../Icons/cart.png" /></button></a>
     <?php
         } else {
     ?>

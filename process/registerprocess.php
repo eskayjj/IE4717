@@ -1,4 +1,7 @@
 <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        header('location: ../Pages/index.php');
+    }
     $registerUser = $_POST['regUser'];
     $registerEmail = $_POST['regEmail'];
     $registerPassword = $_POST['regPassword'];
