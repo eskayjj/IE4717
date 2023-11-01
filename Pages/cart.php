@@ -50,7 +50,7 @@
             <!-- <div class="canteenLabel">
                 <label>Canteen [?]</label>
             </div>   -->
-            <form method='post' action='../process/clearCartprocess.php'>
+            <form method='post' action='../process/cartprocess.php'>
             <?php
                 while ($row = mysqli_fetch_assoc($result)) {
                     $subTotal = floatval($row['price']) * floatval($row['quantity']);

@@ -8,6 +8,66 @@
 }
 
 .headLabel{
-    margin: 53px auto 31px 60px;
+    margin: 53px auto 31px 0px;
     font-size: 40px;
+}
+
+#innerContent{
+    /* display: flex; */
+    position: relative;
+    background-color: #d9d9d9;
+    height: fit-content;
+    width: 1161px;
+    margin-bottom: 200px;
+}
+
+#editBtn{
+    /* float: right; */
+    /* flex: 1; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 34px;
+    margin-top: 14px;
+}
+
+#editBtn button{
+    border: none;
+    background-color: #d9d9d9;
+    font-size: 25px;
+
+}
+
+#editBtn button:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+#details{
+    /* flex: 15; */
+    display: block;
+    padding: 25px 0;
+    font-size: 35px;
+    margin-left: 37px;
+    margin-top: 22px;
+    margin-bottom: 50px;
+    /* background-color: blue; */
+}
+
+input[type="text"], input[type="number"]{
+    width: 876px;
+    height: 70px;
+    font-size: 35px;
+    border-radius: 10px;
+    padding-left: 12px;
+}
+
+.invisible {
+    display: none;
+}
+
+#accountNameFail, #accountContactFail {
+    color: red;
+    display: none;
+    width: 100%;
 }

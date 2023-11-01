@@ -1,9 +1,7 @@
 # IE4717
 
 To-do:
-- Cart.php (checkout)
-- Index.php Search bar
-- Index.php Ranking
+- Cart.php (checkout Mercury)
 - DB Photos
 - Password hashing
-- Account.php
+- admin.php

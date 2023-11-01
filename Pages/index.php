@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
     <?php
         session_start();
+        // set username and password
+        @ $db = new mysqli('localhost', 'root', '', 'studyfuel');
+
+        if (mysqli_connect_errno()) {
+            exit;  
+        }
+        $query = 'SELECT * FROM food ORDER BY rank DESC LIMIT 5';
+        $result = $db->query($query);
     ?>
 </head>
 <body>
@@ -25,11 +33,11 @@
         ?>
         
         <!-- If got spare time then implement Search Button -->
-        <div id="searchBar">
+        <!-- <div id="searchBar">
             <form>
                 <input type="search" name="foodSearch" placeholder="Search for food...">
             </form>
-        </div>
+        </div> -->
     </header>
     <div class="content">
         <div id="popularChoicesTitle">
@@ -37,11 +45,16 @@
         </div>
         <!--Link Image to Food in Different canteen using PHP and SQL-->
         <div id="popularChoicesPhoto">
+            <?php
+                while( $row = mysqli_fetch_assoc($result) ){
+                    echo '<a href="../Pages/canteen.php?id='.$row['canteen_id'].'"><img src="../Icons/placeholder-image.png"></a>';
+                }
+            ?>
+            <!-- <a href="#"><img src="../Icons/placeholder-image.png"></a>
             <a href="#"><img src="../Icons/placeholder-image.png"></a>
             <a href="#"><img src="../Icons/placeholder-image.png"></a>
             <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>  
+            <a href="#"><img src="../Icons/placeholder-image.png"></a>   -->
         </div>
     </div>
     <?php

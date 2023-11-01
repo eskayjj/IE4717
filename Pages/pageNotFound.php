@@ -9,14 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
-    <script src="../js/timeCheck.js"></script>
+    <!-- <script src="../js/timeCheck.js"></script> -->
     <?php
         Session_start();
-        if(!isset($_SESSION['redirectFromCartProcess'])) {
-            header('location: ../Pages/index.php');
-        }
-        unset($_SESSION['redirectFromCartProcess']);
-        // $_SESSION['fromFinal'] = true;
+        
         if(!isset($_COOKIE['user'])) {
             header('location: ../Pages/login.php');
         } 
@@ -33,10 +29,7 @@
     <div class="content">
         <div id="textInfo">
             <div id="timeCheck">
-                Thanks for your order!<br>Your order will arrive approximately at <script>timeCheck()</script>.<br>
-            </div>
-            <div id="defaultText">
-                You can keep track of the status of your order using the email just sent to your inbox.
+                Page requested not found
             </div>
         </div>
         <div id="backLink">

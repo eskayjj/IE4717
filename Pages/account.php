@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <script defer src="../js/validation.js"></script>
+    <script defer src="../js/account.js"></script>
     <?php
         if(!isset($_COOKIE['user'])) {
             header('location: ../Pages/login.php');
@@ -28,21 +30,40 @@
         
         <!-- Retrieve Username from SQL -->
         <div id="accountTitle">
-            Welcome, {User}!
+            Welcome, <?php echo $_SESSION['username'] ?>!
         </div>
     </header>
     <div class="content">
         <div class="headLabel">
-            <label>Address</label>
+            <label>Account Details</label>
         </div>
-        <div>
-            {Details}
-        </div>
-        <div class="headLabel">
-            <label>Order History</label>
-        </div>
-        <div>
-            {History Details}
+        <div id=innerContent>
+            <form id="accountForm" onsubmit="return accountDetailValidation()" method="post" action="../process/updateAccountprocess.php">
+                <div id="details">
+                    <label><b>Name</b><br></label>
+                    <?php
+                        echo '<span class="detailFix">'.$_SESSION['name'].'</span>';
+                        echo '<input type="text" name="accountName" id="accountName" class="detailEdit invisible" value="'.$_SESSION['name'].'"/>';
+                    ?>
+                    <span id="accountNameFail">Invalid name</span>
+                    
+                    <label><br><b>Contact Number</b><br></label>
+                    <?php
+                        echo '<span class="detailFix">'.$_SESSION['contactNumber'].'</span>';
+                        echo '<input type="number" name="contactNumber" id="contactNumber" class="detailEdit invisible" value="'.$_SESSION['contactNumber'].'"/>';
+                    ?>
+                    <span id="accountContactFail">Invalid Contact Number</span>
+                    <label><br><b>Delivery Address</b><br></label>
+                    <?php
+                        echo '<span class="detailFix">'.$_SESSION['deliveryAddress'].'</span>';
+                        echo '<input type="text" name="accountAddress" id="accountAddress" class="detailEdit invisible" value="'.$_SESSION['deliveryAddress'].'"/>';
+                    ?>
+                </div>
+                <div id=editBtn>
+                    <button onclick="return showAccountForm()"  class="detailFix"><u>Edit</u></button>
+                    <button onclick="return accountFormSubmit()" class="detailEdit invisible"><u>Save</u></button>
+                </div>
+            </form>
         </div>
     </div>
     <?php

@@ -23,6 +23,9 @@
 
         $query = 'SELECT canteen FROM canteen WHERE canteen_id = "'. $_GET['id'] . '"';
         $result = $db->query($query);
+        if ($result->num_rows == 0) {
+            header('location: ../Pages/pageNotFound.php');
+        }
         $query2 = 'SELECT * from food WHERE canteen_id = "'. $_GET['id'] .'"';
         $result2 = $db->query($query2);
        

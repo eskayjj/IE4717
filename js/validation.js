@@ -238,3 +238,31 @@ function feedbackValidation(){
 
     return true
 }
+
+function accountDetailValidation(){
+    var contactCrit = document.getElementById('contactNumber')
+    var nameCrit = document.getElementById('accountName')
+
+    var accountNameFail = document.getElementById('accountNameFail')
+    var accountContactFail = document.getElementById('accountContactFail')
+
+    const nameRegex = /^[A-Za-z]+$/
+    const numberRegex = /^[9|8|6]{1}[0-9]{7}$/
+
+    // console.log(contactCrit.value)
+    if(!nameRegex.test(nameCrit.value)){
+        console.log('Fail Name')
+        accountNameFail.style.display = 'inline-block'
+        return false
+    }
+
+    if(!numberRegex.test(contactCrit.value)){
+        console.log('Fail Contact')
+        accountContactFail.style.display = 'inline-block'
+        return false
+    }
+
+    accountNameFail.style.display = 'none'
+    accountContactFail.style.display = 'none'
+    return true
+}
