@@ -1,0 +1,44 @@
+.topButton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 450px;
+    padding-top: 35px;
+}
+
+.topButton button{
+    width: 160px;
+    height: 50px;
+    margin-right: 50px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.topButton button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.topButton button label{
+    position: relative;
+    font-size: 30px;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+#adminTitle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    padding-bottom: 53px;
+    font-family: 'Capriola', sans-serif;
+    font-size: 130px;
+}
+
+#errorMsg{
+    display: block;
+}

@@ -3,5 +3,4 @@
 To-do:
 - Cart.php (checkout Mercury)
 - DB Photos
-- Password hashing
-- admin.php
+- admin.php (put photos)

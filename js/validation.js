@@ -266,3 +266,43 @@ function accountDetailValidation(){
     accountContactFail.style.display = 'none'
     return true
 }
+
+
+function adminclValidation(){
+    var crit1 = document.getElementById('clCanteenName')
+
+    var nameRegex = /^[\w-]+$/
+
+    var errorText = document.getElementById('errorText')
+
+    if(!nameRegex.test(crit1.value)){
+        console.log('Fail Canteen Name')
+        errorText.innerHTML = 'Invalid Input'
+        return false
+    }
+
+    return true
+}
+
+function adminflValidation(){
+    var crit2 = document.getElementById('flFoodName')
+    var crit3 = document.getElementById('flPrice')
+
+    var priceRegex = /^[0-9]{1,}\.[0-9]{2}$/
+    var nameRegex = /^[\w-]+$/
+
+    var errorText = document.getElementById('errorText')
+
+    if(!priceRegex.test(crit3.value)){
+        console.log('Fail Price')
+        errorText.innerHTML = 'Invalid Input'
+        return false
+    }
+
+    if(!nameRegex.test(crit2.value)){
+        console.log('Fail Food Name')
+        errorText.innerHTML = 'Invalid Input'
+        return false
+    }
+    return true
+}
