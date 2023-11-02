@@ -26,7 +26,7 @@
 <body>
     <header>
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <a href="admin.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
 
         <div class="topButton">
             <?php
