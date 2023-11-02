@@ -22,21 +22,39 @@
     height: 140px;
     background-color: #d9d9d9;
     position: relative;
-    /* float: left; */
     z-index: -1;
 }
+
+.canteenListPhoto img{
+    position: relative;
+    z-index: -1;
+    display: block;
+    width: 318px;
+    height: 140px;
+}
+
+.canteenListPhoto .fade{
+    position: absolute;
+    bottom: 0;
+    width: 318px; 
+    height: 140px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0) 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 80%) repeat scroll 0 0;
+}
+
 
 .canteenListText{
     /* display: block; */
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .canteenListText:hover{
     cursor: pointer;
-    pointer-events: auto;
+    /* pointer-events: auto; */
 }
 
 .canteenListText label{
@@ -44,4 +62,11 @@
     font-family: 'Capriola', sans-serif;
     font-size: 30px;
     text-align: center;
+    color: brown;
+}
+
+/* not working need fix */
+.canteenListText label:hover{
+    color: black;
+
 }

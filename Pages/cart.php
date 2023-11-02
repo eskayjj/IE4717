@@ -60,7 +60,9 @@
                         <input type="checkbox" name="cartItem[]" class="cartItem" onclick="return onCartItemCheck(<?php echo $row['food_id'] ?>)" value="<?php echo $row['food_id'] . ',' . $subTotal ?>">
                         <span class="checkmark"></span>
                     </label>
-                    <img src="placeholder.jpg" alt="Image of Food" width="500" height="300" style="float: left; padding-left: 10%; padding-top: 6%;"/>
+                    <div onload="openCart">
+                        <img src="../foodPhoto/<?php echo $row['image_path'] ?>" alt="Image of Food" width="500" height="300" style="float: left; margin: 20px 120px"/>
+                    </div>
                     <div id="description">
                         <?php
                             echo '<p>' . $row['food_name'] . '</p>'

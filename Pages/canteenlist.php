@@ -46,6 +46,7 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     $_SESSION['canteenName'] = $row['canteen'];
                     $_SESSION['canteenID'] = $row['canteen_id'];
+                    $_SESSION['canteenImage'] = $row['image_path'];
                     include 'canteenlistphoto.php';
                 }
             ?>

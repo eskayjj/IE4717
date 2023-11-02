@@ -2,7 +2,7 @@
 echo'
     <div class="canteenPhoto">
         <div id="photo">
-            <img src="../Icons/placeholder-image">
+            <img src="../foodPhoto/'.$_SESSION['image_path'].'"/>
         </div>
         <div id="description">
             <label>'.$_SESSION['foodName'].'</label>

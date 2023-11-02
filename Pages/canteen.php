@@ -60,6 +60,7 @@
                     $_SESSION['foodName'] = $row['food_name'];
                     $_SESSION['description'] = $row['description'];
                     $_SESSION['price'] = $row['price'];
+                    $_SESSION['image_path'] = $row['image_path'];
                     include 'canteenphoto.php';
                 }
             ?>
@@ -72,8 +73,7 @@
                 <span class="close">&times;</span>
             </div>
             <div id="modalList">
-                <div id="photo">
-                    <img src="../Icons/placeholder-image">
+                <div id="modalPhoto">
                 </div>
                 <div id="modalDescription">
                 </div>

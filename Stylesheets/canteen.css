@@ -50,8 +50,8 @@
     width: 1187px;
 }
 
-#photo{
-    height: 131px;
+#photo img, #modalPhoto img{
+    max-height: 131px;
     min-width: 284px;
     max-width: 284px;
     margin-right: 96px;

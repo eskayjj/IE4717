@@ -20,15 +20,19 @@ function openCart(ele, foodId){
     const desc = parentEle.children[1]
     const foodName = desc.children[0].innerHTML
     const description = desc.children[1].innerHTML
+    const image_path = parentEle.children[0].innerHTML
     var price = parentEle.children[2].children[0].innerHTML
     
     var modalDescription = document.getElementById("modalDescription");
     var modalPrice = document.getElementById("modalPrice");
+    var modalPhoto = document.getElementById("modalPhoto");
 
     price = price.split('$')[1] 
 
     hiddenFoodId.value = foodId
     hiddenPrice.value = price
+
+    modalPhoto.innerHTML = `${image_path}`
 
     modalDescription.innerHTML = 
         `<label>${foodName}</label>
