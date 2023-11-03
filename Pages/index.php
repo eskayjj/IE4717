@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Project Placeholder</title>
+    <title>Studyfuel</title>
     <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
 <body>
     <header>
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <a href="index.php"><img class="logo" src="../Icons/studyfuelLogo.jpg"></a>
 
         <!--Change the colour of hover and link to new webpages-->
         <?php
@@ -46,8 +46,8 @@
         <!--Link Image to Food in Different canteen using PHP and SQL-->
         <div id="popularChoicesPhoto">
             <?php
-                while( $row = mysqli_fetch_assoc($result) ){
-                    echo '<a href="../Pages/canteen.php?id='.$row['canteen_id'].'"><img src="../Icons/placeholder-image.png"></a>';
+                while($row = mysqli_fetch_assoc($result) ){
+                    echo '<a href="../Pages/canteen.php?id='.$row['canteen_id'].'"><img src="../foodPhoto/'.$row['image_path'].'"></a>';
                 }
             ?>
             <!-- <a href="#"><img src="../Icons/placeholder-image.png"></a>

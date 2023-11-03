@@ -7,7 +7,7 @@
     <!-- Change Email Destination -->
     <div class="contactUs">
         <h2>Contact Us</h2>
-        <a href="mailto:email@email.com">email@email.com</a>
+        <a href="mailto:f32ee@localhost">f32ee@localhost</a>
     </div>
     <div class="quickLinks">
         <h2>Quick Links</h2>

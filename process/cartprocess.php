@@ -19,6 +19,12 @@
     }
     $stringFoodId = implode(", ",$foodId);
 
+    //Time Check
+    date_default_timezone_set('Asia/Singapore');
+    $currentTime = date('H:i:s');
+    $newTime = date('H:i:s', strtotime($currentTime. '+1 hour'));
+
+
     if($_POST['clearBtn']){
         // echo 'DELETE FROM cart WHERE name_id =' . $_COOKIE['user'] . ' and food_id in ( ' . $stringFoodId . ')';
         $query = 'DELETE FROM cart WHERE name_id = ' . $_COOKIE['user'] . ' and food_id in (' . $stringFoodId . ')';
@@ -40,6 +46,15 @@
 
             Session_start();
             $_SESSION['redirectFromCartProcess'] = true;
+
+            // Mail Server
+            $to = 'f31ee@localhost';
+            $subject = 'Information on Meal Delivery';
+            $message = 'Dear '. $_SESSION['username']. ',' . "\n\n" . 'Your order will be arriving approximately at '. $newTime . '.' 
+            . "\n\n" . 'Well wishes,' . "\n" . 'StudyFuel';
+            $headers = 'From: f32ee@localhost'. "\r\n" . 'Reply-To: f32ee@localhost' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+
+            mail($to, $subject, $message, $headers, '-ff32ee@localhost');
 
             header('location: ../Pages/final.php');
 

@@ -8,11 +8,15 @@ function timeCheck(){
     // console.log(timeText);
     if(hour >= 13 && hour <= 23){
         var timeOfDay = 'PM';
-        document.write(time + ' ' + timeOfDay);
+        var finalTime = time + ' ' + timeOfDay;
+        document.write(finalTime);
+        return finalTime;
     }
     
     else{
         var timeOfDay = 'AM';
-        document.write(time + ' ' + timeOfDay);
+        var finalTime = time + ' ' + timeOfDay;
+        document.write(finalTime);
+        return finalTime;
     }
 }
