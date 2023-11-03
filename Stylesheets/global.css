@@ -15,7 +15,6 @@ body{
 .logo{
     width: 319px;
     height: 109px;
-    border-style: solid;
     margin-left: 5%;
     margin-top: 2%;
 }
@@ -38,7 +37,7 @@ header{
     top: 0;
     display: flex;
     justify-content: space-evenly;
-    width: 450px;
+    width: 700px;
     padding-top: 35px;
 }
 

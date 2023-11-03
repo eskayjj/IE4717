@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Project Placeholder-List</title>
-    <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
-    <link rel="stylesheet" type="text/css" href="../Stylesheets/canteen.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
-    <script defer src="../js/canteenFoodModal.js"></script>
-    <script defer src=../js/counter.js></script>
     <?php
+        Session_start();
+
         if(!isset($_COOKIE['user'])) {
             header('location: ../Pages/login.php');
+            setcookie('loginRedirect', "../Pages/canteen.php?id=". $_GET['id'] , time() + (86400), "/");
         } 
+
+        if(isset($_COOKIE['loginRedirect'])){
+            setcookie("loginRedirect", "", time() - 3600 ,"/");
+        }
+
         @ $db = new mysqli('localhost', 'root', '', 'studyfuel');
 
         if (mysqli_connect_errno()) {
@@ -26,16 +24,27 @@
         if ($result->num_rows == 0) {
             header('location: ../Pages/pageNotFound.php');
         }
+        $title = mysqli_fetch_assoc($result);
         $query2 = 'SELECT * from food WHERE canteen_id = "'. $_GET['id'] .'"';
         $result2 = $db->query($query2);
        
-        Session_start();
     ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $title['canteen']?></title>
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/canteen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <script defer src="../js/canteenFoodModal.js"></script>
+    <script defer src=../js/counter.js></script>
 </head>
 <body>
     <header>
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <a href="index.php"><img class="logo" src="../Icons/studyfuelLogo.png"></a>
 
         <!--Change the colour of hover and link to new webpages-->
         <?php
@@ -43,7 +52,7 @@
         ?>
         <div id="canteenTitle">
             <?php
-                 $title = mysqli_fetch_assoc($result);
+                 
                  echo $title['canteen'];
             ?>
         </div>

@@ -41,7 +41,13 @@
             $cookie_value = $data['user_id'];
             setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day
             echo "Cookie '" . $cookie_name . "' is set!";
-            header('location: ../Pages/canteenlist.php');
+            if(isset($_COOKIE['loginRedirect'])){
+                header('location:' . $_COOKIE['loginRedirect']);
+            }
+            else{
+                header('location: ../Pages/canteenlist.php');
+            }
+            
         }
         
         // echo ($_SESSION['loginEmail'] . $_SESSION['username'] . $_SESSION['name'] . $_SESSION['contactNumber'] . $_SESSION['deliveryAddress']);

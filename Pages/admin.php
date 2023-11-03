@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Project Placeholder</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
     <script defer src="../js/validation.js"></script>
+    <!-- <script defer src="../js/fileValidation.js"></script> -->
     <?php
         Session_start();
         // set username and password
@@ -26,7 +28,7 @@
 <body>
     <header>
         <!-- Create Logo & Find BG image for Header-->
-        <a href="admin.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <a href="admin.php"><img class="logo" src="../Icons/studyfuelLogo.png"></a>
 
         <div class="topButton">
             <?php
@@ -49,12 +51,13 @@
         </div>
     </header>
     <div class="content">
-        <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()">
+        <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()" enctype="multipart/form-data">
             <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br>
+            <input type="file" name="clPhoto" id="clPhoto"/><br>
             <input type="submit" name="clSubmit" value="Add to Database"/><br><br>
         </form>
 
-        <form id="updateFoodList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminflValidation()">
+        <form id="updateFoodList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminflValidation()" enctype="multipart/form-data">
             <!-- <input type="select" name="flCanteenName" placeholder="Insert Canteen Name"/><br> -->
             <select name="flCanteenId">
                 <?php
@@ -66,6 +69,7 @@
             <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name"/><br>
             <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description"/><br>
             <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br>
+            <input type="file" name="flPhoto" id="flPhoto"/><br>
             <input type="submit" name="flSubmit" value="Add to Database"/>
         </form>
         <p id=errorText></p>

@@ -2,6 +2,7 @@
     <?php
         if(isset($_COOKIE['user'])) {
     ?>
+        <a href="../Pages/canteenlist.php"><button><label style="margin-left: 0px;">Canteens</label></button></a>
         <div class="dropdown">
             <!--If not logged in, needs to display login button instead-->
             <button class="dropbtn"><label>Account</label><img src="../Icons/dropdown.png"></button>

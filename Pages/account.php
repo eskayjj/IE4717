@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Project Placeholder-Account</title>
+    <title>Account - <?php session_start(); echo $_SESSION['username']; ?></title>
     <link rel="stylesheet" type="text/css" href="../Stylesheets/global.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
     <script defer src="../js/validation.js"></script>
     <script defer src="../js/account.js"></script>
     <?php
         if(!isset($_COOKIE['user'])) {
             header('location: ../Pages/login.php');
-        } 
-        session_start();
+        }   
     ?>
 </head>
 <body>
     <header>
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.php"><img class="logo" src="../Icons/placeholder-image.png"></a>
+        <a href="index.php"><img class="logo" src="../Icons/studyfuelLogo.png"></a>
         
         <!--Change the colour of hover and link to new webpages-->
         <?php

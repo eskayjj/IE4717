@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Inder&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
     <?php
         session_start();
         // set username and password
@@ -25,7 +26,7 @@
 <body>
     <header>
         <!-- Create Logo & Find BG image for Header-->
-        <a href="index.php"><img class="logo" src="../Icons/studyfuelLogo.jpg"></a>
+        <a href="index.php"><img class="logo" src="../Icons/studyfuelLogo.png"></a>
 
         <!--Change the colour of hover and link to new webpages-->
         <?php
