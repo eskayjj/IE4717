@@ -2,7 +2,7 @@
     <!-- Fill in About Us -->
     <div class="aboutUs">
         <h2>About Us</h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id lorem nec ligula imperdiet aliquam. Mauris nec diam vitae mauris molestie pharetra.
+         At StudyFuel, we are committed to revolutionizing the way students and faculty experience school dining. We understand that in the fast-paced world of education, time is precious, and that's why we're here to ensure that everyone at NTU can enjoy delicious and nutritious meals without the hassle and to 'fuel up' your study sessions!
     </div>
     <!-- Change Email Destination -->
     <div class="contactUs">
