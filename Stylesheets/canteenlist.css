@@ -62,9 +62,9 @@
     font-family: 'Capriola', sans-serif;
     font-size: 30px;
     text-align: center;
-    color: brown;
+    color: #623f16;
 }
 
 #list a:hover .canteenListText label{
-    color: black;
+    color: #a88558;
 }
