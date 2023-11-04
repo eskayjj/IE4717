@@ -15,7 +15,7 @@
 #innerContent{
     /* display: flex; */
     position: relative;
-    background-color: #d9d9d9;
+    background-color: #cbbfaf;
     height: fit-content;
     width: 1161px;
     margin-bottom: 200px;
@@ -33,14 +33,14 @@
 
 #editBtn button{
     border: none;
-    background-color: #d9d9d9;
+    background-color: #cbbfaf;
     font-size: 25px;
 
 }
 
 #editBtn button:hover{
     cursor: pointer;
-    color: blue;
+    color: whitesmoke;
 }
 
 #details{
