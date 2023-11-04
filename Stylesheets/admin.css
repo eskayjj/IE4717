@@ -17,7 +17,7 @@
 }
 
 .topButton button:hover{
-    background-color: black;
+    background-color: grey;
     color: white;
     cursor: pointer;
 }
@@ -36,9 +36,28 @@
     -webkit-transform: translateX(-50%);
     padding-bottom: 53px;
     font-family: 'Capriola', sans-serif;
-    font-size: 130px;
+    font-size: 90px;
 }
 
 #errorMsg{
     display: block;
+}
+
+#innerContent{
+    position: relative;
+    background-color: #cbbfaf;
+    height: fit-content;
+    width: 800px;
+    margin: 76px 191px 76px 350px;
+}
+
+.addCanteen{
+    margin: 53px auto 31px 230px;
+    font-size: 40px;
+    font-family: 'Capriola', sans-serif;
+}
+
+.addFood{
+    font-size: 40px;
+    font-family: 'Capriola', sans-serif;
 }
