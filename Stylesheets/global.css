@@ -10,6 +10,7 @@ html{
 
 body{
     min-width: 1280px;
+    background-color: #eee5d1;
 }
 
 .logo{
@@ -22,7 +23,7 @@ body{
 header{
     height: 572px;
     width: 100%;
-    background-color: grey;
+    background-color: #a2afb7;
     position: relative;
 }
 
@@ -50,7 +51,7 @@ header{
 }
 
 .topButton button:hover{
-    background-color: black;
+    background-color: grey;
     color: white;
     cursor: pointer;
 }
@@ -74,7 +75,7 @@ header{
     display: flex;
     padding: 0px;
     bottom: 0;
-    background-color: gray;
+    background-color: #a2afb7 ;
     width: 100%;
     justify-content: space-evenly;
     height: 222px;
@@ -155,7 +156,7 @@ header{
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: lightgray;
 }
 
 /* Show the dropdown menu on hover */
@@ -165,7 +166,7 @@ header{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: black;
+    background-color: grey;
     color: white;
 }
 
