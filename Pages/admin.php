@@ -50,13 +50,17 @@
             Admin Page
         </div>
     </header>
+    <div id=innerContent>
+    <div class="addCanteen">
+        <u>Update Canteens</u>
     <div class="content">
         <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()" enctype="multipart/form-data">
             <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br>
             <input type="file" name="clPhoto" id="clPhoto"/><br>
             <input type="submit" name="clSubmit" value="Add to Database"/><br><br>
         </form>
-
+        <div class="addFood">
+        <u>Update Food List</u>
         <form id="updateFoodList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminflValidation()" enctype="multipart/form-data">
             <!-- <input type="select" name="flCanteenName" placeholder="Insert Canteen Name"/><br> -->
             <select name="flCanteenId">
@@ -71,6 +75,7 @@
             <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br>
             <input type="file" name="flPhoto" id="flPhoto"/><br>
             <input type="submit" name="flSubmit" value="Add to Database"/>
+            <p id="errorText" style="color: red; font-size:50%;"></p>
         </form>
         <p id=errorText></p>
         <?php if(isset($_SESSION['updateFail'])) {
