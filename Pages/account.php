@@ -44,14 +44,14 @@
                     <?php
                         echo '<span class="detailFix">'.$_SESSION['name'].'</span>';
                         echo '<input type="text" name="accountName" id="accountName" class="detailEdit invisible" value="'.$_SESSION['name'].'"/>';
-                    ?>
+                    ?><br>
                     <span id="accountNameFail">Invalid name</span>
                     
                     <label><br><b>Contact Number</b><br></label>
                     <?php
                         echo '<span class="detailFix">'.$_SESSION['contactNumber'].'</span>';
                         echo '<input type="number" name="contactNumber" id="contactNumber" class="detailEdit invisible" value="'.$_SESSION['contactNumber'].'"/>';
-                    ?>
+                    ?><br>
                     <span id="accountContactFail">Invalid Contact Number</span>
                     <label><br><b>Delivery Address</b><br></label>
                     <?php
