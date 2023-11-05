@@ -66,6 +66,6 @@ option {
 
 #feedbackSubmit:hover{
     cursor: pointer;
-    background-color: black;
+    background-color: grey;
     color: white;
 }
