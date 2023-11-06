@@ -34,7 +34,14 @@
     <div class="content">
         <div id="feedbackFormBG">
             <div id="feedbackForm">
-                <form onsubmit="return feedbackValidation()">
+                <form action="../process/feedbackprocess.php" method="post" onsubmit="return feedbackValidation()">
+                <?php if(isset($_SESSION['feedbackUpdate'])) {
+                        if(!$_SESSION['feedbackUpdate']){
+                            echo '<script>alert("Hello! I am an alert box!!");</script>';
+                            unset($_SESSION['feedbackUpdate']);
+                        }
+                    }
+                    ?> 
                     <p id="pSubject">Subject*</p>
                     <select name="subject" id="subject" required>
                         <option value="" disabled selected>Choose one...</option>
@@ -52,7 +59,7 @@
                     <p id="pContact">Contact Number</p>
                     <input type="text" name="feedbackContact" id="feedbackContact">
                     <p id="pFeedback">Feedback*</p>
-                    <input type="text" name="feedbackFeedback" id="feedbackBox" required>
+                    <input type="text" name="feedbackFeedback" id="feedbackFeedback" required>
                     <input type="submit" id="feedbackSubmit" name="feedbackBtn" value="Submit Feedback!"
                         style="margin-top: 61px;">
                 </form>
