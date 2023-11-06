@@ -50,33 +50,45 @@
             Admin Page
         </div>
     </header>
-    <div id=innerContent>
-    <div class="addCanteen">
-        <u>Update Canteens</u>
     <div class="content">
-        <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()" enctype="multipart/form-data">
-            <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br>
-            <input type="file" name="clPhoto" id="clPhoto"/><br>
-            <input type="submit" name="clSubmit" value="Add to Database"/><br><br>
-        </form>
-        <div class="addFood">
-        <u>Update Food List</u>
-        <form id="updateFoodList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminflValidation()" enctype="multipart/form-data">
-            <!-- <input type="select" name="flCanteenName" placeholder="Insert Canteen Name"/><br> -->
-            <select name="flCanteenId">
-                <?php
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo '<option value='. $row['canteen_id'].'>'.$row['canteen'].'</option>';
-                    } 
-                ?>
-            </select><br>
-            <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name"/><br>
-            <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description"/><br>
-            <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br>
-            <input type="file" name="flPhoto" id="flPhoto"/><br>
-            <input type="submit" name="flSubmit" value="Add to Database"/>
-            <p id="errorText" style="color: red; font-size:50%;"></p>
-        </form>
+        <div id=innerContent>
+            <table>
+                <tr>
+                    <td>
+                        <div class="addCanteen">
+                            <u>Update Canteens</u>
+                        </div>
+                        <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()" enctype="multipart/form-data">
+                            <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br>
+                            <input type="file" name="clPhoto" id="clPhoto"/><br>
+                            <input type="submit" name="clSubmit" value="Add to Database"/><br><br>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="addFood">
+                            <u>Update Food List</u>
+                        </div>
+                        <form id="updateFoodList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminflValidation()" enctype="multipart/form-data">
+                            <!-- <input type="select" name="flCanteenName" placeholder="Insert Canteen Name"/><br> -->
+                            <select name="flCanteenId">
+                                <?php
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo '<option value='. $row['canteen_id'].'>'.$row['canteen'].'</option>';
+                                    } 
+                                ?>
+                            </select><br>
+                            <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name"/><br>
+                            <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description"/><br>
+                            <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br>
+                            <input type="file" name="flPhoto" id="flPhoto"/><br>
+                            <input type="submit" name="flSubmit" value="Add to Database"/>
+                            <p id="errorText" style="color: red; font-size:50%;"></p>
+                    </td>
+                </tr>
+            </form>
+        </table>
         <p id=errorText></p>
         <?php if(isset($_SESSION['updateFail'])) {
             echo $_SESSION['updateFail'];
@@ -86,6 +98,7 @@
                             }
                         }
                         ?> 
+        </div>
     </div>
 </body>
 
