@@ -33,12 +33,6 @@
             include 'loginheader.php';
         ?>
         
-        <!-- If got spare time then implement Search Button -->
-        <!-- <div id="searchBar">
-            <form>
-                <input type="search" name="foodSearch" placeholder="Search for food...">
-            </form>
-        </div> -->
     </header>
     <div class="content">
         <div id="popularChoicesTitle">
@@ -51,11 +45,6 @@
                     echo '<a href="../Pages/canteen.php?id='.$row['canteen_id'].'"><img src="../foodPhoto/'.$row['image_path'].'"></a>';
                 }
             ?>
-            <!-- <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>
-            <a href="#"><img src="../Icons/placeholder-image.png"></a>   -->
         </div>
     </div>
     <?php

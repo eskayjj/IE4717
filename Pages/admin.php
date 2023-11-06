@@ -59,8 +59,8 @@
                             <u>Update Canteens</u>
                         </div>
                         <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()" enctype="multipart/form-data">
-                            <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br><br>
-                            <input type="file" name="clPhoto" id="clPhoto"/><br><br>
+                            <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name" required/><br><br>
+                            <input type="file" name="clPhoto" id="clPhoto" required/><br><br>
                             <input type="submit" name="clSubmit" value="Add to Database"/><br>
                         </form>
                     </td>
@@ -79,10 +79,10 @@
                                     } 
                                 ?>
                             </select><br><br>
-                            <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name"/><br><br>
-                            <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description"/><br><br>
-                            <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br><br>
-                            <input type="file" name="flPhoto" id="flPhoto"/><br><br>
+                            <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name" required/><br><br>
+                            <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description" required/><br><br>
+                            <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)" required/><br><br>
+                            <input type="file" name="flPhoto" id="flPhoto" required/><br><br>
                             <input type="submit" name="flSubmit" value="Add to Database"/>
                             <p id="errorText" style="color: red; font-size:100%;"></p>
                     </td>

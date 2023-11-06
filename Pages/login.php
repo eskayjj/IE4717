@@ -41,9 +41,6 @@
             </form>
         </div>
         <div id="loginBtns">
-            <!-- <div>
-                <a href="forgotPW.php"><button>Forget Password?</button></a>
-            </div> -->
             <div>
                 <a href="register.php"><button style= "margin-bottom: 66px;">Register</button></a>
             </div>

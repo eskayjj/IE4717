@@ -37,7 +37,7 @@
                 <form action="../process/feedbackprocess.php" method="post" onsubmit="return feedbackValidation()">
                 <?php if(isset($_SESSION['feedbackUpdate'])) {
                         if(!$_SESSION['feedbackUpdate']){
-                            echo '<script>alert("Hello! I am an alert box!!");</script>';
+                            echo '<script>alert("Database update fail");</script>';
                             unset($_SESSION['feedbackUpdate']);
                         }
                     }
