@@ -52,16 +52,16 @@
     </header>
     <div class="content">
         <div id=innerContent>
-            <table>
+            <table style="width:100%">
                 <tr>
                     <td>
                         <div class="addCanteen">
                             <u>Update Canteens</u>
                         </div>
                         <form id="updateCanteenList" method="post" action="../process/adminUpdateprocess.php" onsubmit="return adminclValidation()" enctype="multipart/form-data">
-                            <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br>
-                            <input type="file" name="clPhoto" id="clPhoto"/><br>
-                            <input type="submit" name="clSubmit" value="Add to Database"/><br><br>
+                            <input type="text" name="clCanteenName"  id="clCanteenName" placeholder="Insert Canteen Name"/><br><br>
+                            <input type="file" name="clPhoto" id="clPhoto"/><br><br>
+                            <input type="submit" name="clSubmit" value="Add to Database"/><br>
                         </form>
                     </td>
                 </tr>
@@ -78,13 +78,13 @@
                                         echo '<option value='. $row['canteen_id'].'>'.$row['canteen'].'</option>';
                                     } 
                                 ?>
-                            </select><br>
-                            <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name"/><br>
-                            <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description"/><br>
-                            <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br>
-                            <input type="file" name="flPhoto" id="flPhoto"/><br>
+                            </select><br><br>
+                            <input type="text" name="flFoodName" id="flFoodName" placeholder="Insert Food Name"/><br><br>
+                            <input type="text" name="flDescription"  id="flDescription" placeholder="Insert Description"/><br><br>
+                            <input type="text" name="flPrice" id="flPrice" placeholder="Insert Price(Format eg. 0.00)"/><br><br>
+                            <input type="file" name="flPhoto" id="flPhoto"/><br><br>
                             <input type="submit" name="flSubmit" value="Add to Database"/>
-                            <p id="errorText" style="color: red; font-size:50%;"></p>
+                            <p id="errorText" style="color: red; font-size:100%;"></p>
                     </td>
                 </tr>
             </form>
