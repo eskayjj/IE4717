@@ -14,7 +14,7 @@ function increment(){
             qty[0].value = parseInt(currentQty) + 1
             break
         case (currentQty == maxQty):
-            qty[0].value = minQty
+            qty[0].value = maxQty
             break
     }
     
@@ -29,7 +29,7 @@ function decrement(){
             qty[0].value = parseInt(currentQty) - 1
             break
         case (currentQty == minQty):
-            qty[0].value = maxQty
+            qty[0].value = minQty
             break
     }
     modalPrice.innerHTML = `<p>$${(parseFloat(hiddenPrice.value) * parseFloat(qty[0].value)).toFixed(2)}</p>`

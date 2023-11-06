@@ -21,7 +21,7 @@ body{
 }
 
 header{
-    height: 572px;
+    height: 350px;
     width: 100%;
     background-color: #a2afb7;
     position: relative;
@@ -78,7 +78,7 @@ header{
     background-color: #a2afb7 ;
     width: 100%;
     justify-content: space-evenly;
-    height: 230px;
+    height: 300px;
 }
 
 .footer a:hover{
