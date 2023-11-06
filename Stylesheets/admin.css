@@ -47,17 +47,26 @@
     position: relative;
     background-color: #cbbfaf;
     height: fit-content;
-    width: 800px;
-    margin: 76px 191px 76px 350px;
+    width: 50%;
+    margin: 5% auto 5% 25%;
 }
 
 .addCanteen{
-    margin: 53px auto 31px 230px;
+    margin: 5% auto 5% 25%;
     font-size: 40px;
     font-family: 'Capriola', sans-serif;
 }
 
 .addFood{
+    margin: 5% auto 5% 25%;
     font-size: 40px;
     font-family: 'Capriola', sans-serif;
+}
+
+#updateCanteenList {
+    margin: 5% auto 0% 25%;
+}
+
+#updateFoodList {
+    margin: 5% auto 0% 25%;
 }
