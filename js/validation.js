@@ -12,7 +12,7 @@ const contactRegex = /^[0-9]{8}$/
 
 
 function registerValidation(){
-    if(user[0].value.length <8 || user[0].value.length >= 16){
+    if(user[0].value.length <8 || user[0].value.length > 16){
         console.log('Fail User')
         return false
     }
