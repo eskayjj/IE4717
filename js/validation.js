@@ -12,7 +12,7 @@ const contactRegex = /^[0-9]{8}$/
 
 
 function registerValidation(){
-    if(user[0].value.length <=8 || user[0].value.length >= 16){
+    if(user[0].value.length <8 || user[0].value.length >= 16){
         console.log('Fail User')
         return false
     }
@@ -271,7 +271,7 @@ function accountDetailValidation(){
 function adminclValidation(){
     var crit1 = document.getElementById('clCanteenName')
 
-    var nameRegex = /^[\w-]+$/
+    var nameRegex = /^[\w\s\d-]+$/
 
     var errorText = document.getElementById('errorText')
 
@@ -289,7 +289,7 @@ function adminflValidation(){
     var crit3 = document.getElementById('flPrice')
 
     var priceRegex = /^[0-9]{1,}\.[0-9]{2}$/
-    var nameRegex = /^[\w-]+$/
+    var nameRegex = /^[\w\s\d-]+$/
 
     var errorText = document.getElementById('errorText')
 
