@@ -288,7 +288,7 @@ function adminflValidation(){
     var crit2 = document.getElementById('flFoodName')
     var crit3 = document.getElementById('flPrice')
 
-    var priceRegex = /^[0-9]{1,}\.[0-9]{2}$/
+    var priceRegex = /^[0-9]{1,}[\.]{0,1}[0-9]{0,2}$/
     var nameRegex = /^[\w\s\d-]+$/
 
     var errorText = document.getElementById('errorText')
